@@ -1,0 +1,37 @@
+.shop-page {
+  background-image: url("./assets/images/red.png");
+  background-size: contain;
+
+  .intro {
+    padding-top: 200px;
+    text-align: center;
+    margin-bottom: 120px;
+
+    h1 {
+      margin-bottom: 60px;
+    }
+
+    h3 {
+      max-width: 80%;
+      margin: auto;
+    }
+  }
+
+  .extro {
+    padding: 120px 0 160px 0;
+    text-align: center;
+  }
+
+  #eventbrite-widget-container-118643942225 {
+    height: 441px !important;
+    margin-top: 120px;
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    background-image: url('https://icon-library.net/images/spinner-icon-gif/spinner-icon-gif-28.jpg');
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+}

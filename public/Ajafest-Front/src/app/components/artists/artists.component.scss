@@ -1,0 +1,67 @@
+.artists-page {
+  background-image: url("./assets/images/blue.png");
+  background-size: contain;
+  padding-bottom: 160px;
+
+  .buttons {
+    padding-top: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    display: block;
+
+  }
+
+  .artist {
+    position: relative;
+    display: flex;
+    color: white;
+    margin-bottom: 60px;
+    max-width: 640px;
+
+    img {
+      height: 150px;
+      margin-right: 50px;
+    }
+
+    &:last-child {
+      margin: 0px;
+    }
+
+    &:first-child {
+      margin-top: 80px;
+    }
+
+    .day {
+      position: absolute;
+      left: -8px;
+      top: -8px;
+      padding: 1px;
+      border: 1px solid $white;
+      border-radius: 2px;
+
+      &--samedi {
+        background: $yellow;
+        color: black;
+      }
+
+      &--dimanche {
+        background: $red;
+      }
+    }
+  }
+
+
+
+}

@@ -1,0 +1,45 @@
+<div class="contact">
+  <div class="container">
+    <div class="intro">
+      <h1>Contact</h1>
+      <h3>
+        Vous voulez nous posez une question? Nous faire une recommandation?
+        Postuler comme bénévoles? Ou juste nous dire que vous nous aimé?
+      </h3>
+    </div>
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
+      <div class="form-group">
+        <label>Nom</label>
+        <input
+          type="text"
+          class="form-control text"
+          placeholder="Nom"
+          formControlName="name"
+        />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input
+          type="email"
+          class="form-control email"
+          placeholder="Email"
+          formControlName="email"
+        />
+      </div>
+      <div class="form-group">
+        <label>Votre message</label>
+        <textarea
+          type="text"
+          rows="4"
+          class="form-control message"
+          placeholder="Message"
+          formControlName="message"
+        ></textarea>
+      </div>
+      <button type="submit" class="button button--yellow">
+        <label>Envoyer :)</label>
+      </button>
+    </form>
+  </div>
+</div>

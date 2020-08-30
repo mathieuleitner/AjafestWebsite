@@ -1,0 +1,44 @@
+.footer {
+  padding: 36px 0px;
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+
+    .logo {
+      img {
+        height: 60px;
+      }
+    }
+  }
+
+  width: 100%;
+  background: $black;
+  color: rgb(201, 201, 201);
+
+  .wrapper {
+    display: flex;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: rgb(201, 201, 201);
+    }
+  }
+
+  .icon {
+    font-size: 26px;
+  }
+
+}
+
+.signature {
+  background: rgb(22, 22, 22);
+  width: 100%;
+  color: rgb(94, 94, 94);
+  text-align: center;
+  padding: 28px 0px;
+}

@@ -1,0 +1,116 @@
+.header {
+  padding: $header-padding;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  &--2 {
+    background-color: $black;
+    opacity: 0.9;
+
+    .header__logo {
+      height: 48px;
+      width: 48px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    height: 60px;
+    width: 60px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__wrapper {
+      width: 160px;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__label {
+      color: $white;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+
+
+  .burger {
+    height: 48px;
+    width: 48px;
+    position: relative;
+    cursor: pointer;
+    z-index: 100;
+
+
+
+    &:hover {
+
+      .trait--top,
+      .trait--middle,
+      .trait--bottom {
+        width: 40px;
+      }
+    }
+
+    .trait {
+      position: absolute;
+      height: 3px;
+      background-color: white;
+      transition: .4s;
+
+      &--top {
+        top: 14px;
+        left: 4px;
+        width: 40px;
+
+      }
+
+      &--middle {
+        top: 23px;
+        left: 4px;
+        width: 30px;
+
+      }
+
+      &--bottom {
+        top: 32px;
+        left: 4px;
+        width: 20px;
+      }
+    }
+  }
+
+  .menu--open {
+    .trait {
+      &--top {
+        top: 23px;
+        left: 4px;
+        width: 40px;
+        transform: rotate(45deg)
+      }
+
+      &--middle {
+        transform: scaleX(0);
+      }
+
+      &--bottom {
+        top: 23px;
+        left: 4px;
+        width: 40px;
+        transform: rotate(-45deg)
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<div class="benevoles-page" *ngIf="benevolePage">
+  <app-banner
+    *ngIf="benevolePage"
+    title="{{ benevolePage.title }}"
+    subtitle="{{ benevolePage.subtitle }}"
+    image="{{ benevolePage.banner.url }}"
+  ></app-banner>
+  <div class="container">
+    <section>
+      <markdown ngPreserveWhitespaces>
+        {{ benevolePage.content }}
+      </markdown>
+      <a routerLink="/contact">
+        <button class="button button--red">
+          <label>Contactez-nous</label>
+        </button>
+      </a>
+    </section>
+  </div>
+</div>

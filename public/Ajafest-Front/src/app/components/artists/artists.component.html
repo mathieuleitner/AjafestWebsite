@@ -1,0 +1,46 @@
+<div class="artists-page">
+  <app-banner
+    *ngIf="artistPage"
+    title="{{ artistPage.title }}"
+    subtitle="{{ artistPage.subtitle }}"
+    image="{{ artistPage.banner.url }}"
+  ></app-banner>
+  <div class="container">
+    <div class="buttons">
+      <button class="button button--blue" (click)="displayAllArtists()">
+        <label>Tous</label>
+      </button>
+      <button
+        class="button button--yellow button--left"
+        (click)="sortArtistsByDay('Samedi')"
+      >
+        <label>Samedi</label>
+      </button>
+      <button
+        class="button button--red button--right"
+        (click)="sortArtistsByDay('Dimanche')"
+      >
+        <label>Dimanche</label>
+      </button>
+    </div>
+
+    <ul>
+      <li class="artist" *ngFor="let artist of artists">
+        <div *ngFor="let img of artist.image">
+          <figure>
+            <img src="http://localhost:1337{{ img.url }}" alt="" />
+          </figure>
+        </div>
+        <div>
+          <span
+            class="day day--{{ day.Day | lowercase }}"
+            *ngFor="let day of artist.lineups"
+            >{{ day.Day | slice: 0:3 }}</span
+          >
+          <h2>{{ artist.name }}</h2>
+          <p class="artist__about">{{ artist.about }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

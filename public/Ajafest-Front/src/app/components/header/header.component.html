@@ -1,0 +1,50 @@
+<div class="headerWrapper">
+  <div class="header header--1" [@scrollAnimation]="isHeader1Visible">
+    <div class="header__wrapper container">
+      <div class="header__logo__wrapper">
+        <div class="header__logo">
+          <a routerLink="home">
+            <img src="http://localhost:1337{{ logo2 }}" />
+          </a>
+        </div>
+      </div>
+
+      <div class="burger__container">
+        <div
+          class="burger"
+          [ngClass]="{ 'menu--open': toggleMenu }"
+          (click)="displayMenu()"
+        >
+          <span class="trait trait--top"></span>
+          <span class="trait trait--middle"></span>
+          <span class="trait trait--bottom"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header header--2" [@scrollAnimation]="isHeader2Visible">
+    <div class="header__wrapper container">
+      <div class="header__logo__wrapper">
+        <div class="header__logo">
+          <a routerLink="home"
+            ><img src="http://localhost:1337{{ logo1 }}" />
+          </a>
+        </div>
+      </div>
+
+      <div class="burger__container">
+        <div
+          class="burger"
+          [ngClass]="{ 'menu--open': toggleMenu }"
+          (click)="displayMenu()"
+        >
+          <span class="trait trait--top"></span>
+          <span class="trait trait--middle"></span>
+          <span class="trait trait--bottom"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-menu (removeMenu)="updateMenu()" [toggleMenu]="toggleMenu"></app-menu>
+</div>

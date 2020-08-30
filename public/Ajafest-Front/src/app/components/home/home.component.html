@@ -1,0 +1,116 @@
+<div class="home">
+  <div class="container">
+    <section class="title">
+      <h1>Ajafest 2021</h1>
+      <h3>7 & 8 Aout 2021</h3>
+      <h2>Anières, Genève</h2>
+      <div class="cta">
+        <a routerLink="/artists">
+          <button class="button button--blue">
+            <label>voir la line up</label>
+          </button>
+        </a>
+        <a routerLink="/shop">
+          <button class="button button--red">
+            <label>prendre son billet</label>
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <section *ngIf="homePage" class="story">
+      <h2>L'histoire du festival</h2>
+      <div class="flex">
+        <div class="card">
+          <markdown ngPreserveWhitespaces>
+            {{ homePage.story }}
+          </markdown>
+        </div>
+        <div class="video__wrapper">
+          <video class="video" controls [muted]="true">
+            <source
+              src="http://localhost:1337{{ homePage.video.url }}"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Les Artistes</h2>
+      <div class="content">
+        <div class="card artist" *ngFor="let artist of artists | slice: 0:3">
+          <h3>{{ artist.name }}</h3>
+          <div class="card__wrapper" *ngFor="let img of artist.image">
+            <figure class="card__img__wrapper">
+              <img
+                class="card__img"
+                src="http://localhost:1337{{ img.url }}"
+                alt=""
+              />
+            </figure>
+            <p class="card__description">
+              {{ artist.about }}
+            </p>
+          </div>
+        </div>
+        <div class="card__link__wrapper">
+          <a class="card__link" routerLink="/artists"
+            ><button class="button button--blue">
+              <label>Voir tous les artistes</label>
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="links">
+      <div class="content">
+        <a routerLink="/benevoles">
+          <button class="button button--blue">
+            <label>Devenir bénévole</label>
+          </button>
+        </a>
+        <a routerLink="/contact">
+          <button class="button button--yellow">
+            <label>Contactez-nous</label>
+          </button>
+        </a>
+        <a routerLink="/shop">
+          <button class="button button--red">
+            <label>Boutique en ligne</label>
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Retrouvez toutes nos dernières news</h2>
+      <div class="content">
+        <div *ngFor="let article of articles">
+          <a routerLink="/news/{{ article.slug }}">
+            <div class="card">
+              <span>{{ article.createdAt | date: "dd-MM-yyyy" }}</span>
+              <h3>{{ article.title }}</h3>
+              <figure class="card__img__wrapper">
+                <img
+                  class="card__img"
+                  src="http://localhost:1337{{ article.teaser.url }}"
+                  alt=""
+                />
+              </figure>
+            </div>
+          </a>
+        </div>
+        <div class="card__link__wrapper">
+          <a class="card__link" routerLink="/news"
+            ><button class="button button--red">
+              <label>Voir toutes les news</label>
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

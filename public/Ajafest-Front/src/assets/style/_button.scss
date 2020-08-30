@@ -1,0 +1,81 @@
+.button {
+  box-shadow: 0px 2px 5px 0px lightgrey;
+  border: 2px solid $white;
+  border-radius: 50px;
+  min-width: 200px;
+  transition: .4s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  label {
+    padding: 18px 44px;
+    margin: 0;
+    text-transform: uppercase;
+    pointer-events: none;
+    font-weight: bold;
+  }
+
+  &--blue {
+    background: $blue;
+    color: $white;
+
+    label {
+      color: white;
+    }
+
+    &:hover {
+      background: white;
+    }
+
+    &:hover label {
+      color: $blue;
+    }
+
+  }
+
+  &--red {
+    background: $red;
+    color: $white;
+
+    label {
+      color: white;
+    }
+
+    &:hover {
+      background: white;
+    }
+
+    &:hover label {
+      color: $red;
+    }
+  }
+
+  &--yellow {
+    background: $yellow;
+    color: $black;
+
+    label {
+      color: $black;
+    }
+
+    &:hover {
+      background: white;
+    }
+
+    &:hover label {
+      color: $yellow;
+    }
+  }
+
+  &--left {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  &--right {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}

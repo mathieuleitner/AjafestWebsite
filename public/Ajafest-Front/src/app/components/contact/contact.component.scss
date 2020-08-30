@@ -1,0 +1,49 @@
+.contact {
+  background-image: url("./assets/images/red.png");
+  background-size: contain;
+
+  .intro {
+    padding-top: 200px;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 60px;
+    }
+
+    h3 {
+      max-width: 80%;
+      margin: auto;
+    }
+  }
+
+  form {
+    padding: 160px 10%;
+
+    // .message {
+    //   height: 400px;
+    // }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+
+    label {
+      width: fit-content;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    input,
+    textarea {
+      padding: 10px 20px;
+      border-radius: 28px;
+      border: none;
+      width: 540px;
+    }
+
+
+  }
+}

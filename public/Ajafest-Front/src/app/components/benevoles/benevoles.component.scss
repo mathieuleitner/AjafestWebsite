@@ -1,0 +1,16 @@
+.benevoles-page {
+  background-image: url("./assets/images/yellow.png");
+  background-size: contain;
+
+  section {
+    padding: 100px 0px 180px;
+
+    .button {
+      margin-top: 60px;
+    }
+
+    li {
+      display: list-item;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.menu {
+  transition: .3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s;
+
+    &--fix {
+      opacity: 1;
+    }
+
+    &--second {
+      opacity: 0;
+    }
+
+    &--visible {
+      opacity: 1;
+    }
+
+    &__wrapper {
+      position: relative;
+      height: 100%;
+      width: 0%;
+      overflow: hidden;
+    }
+  }
+
+  &__links {
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    padding: 3.5rem 1rem;
+    justify-content: space-between;
+    word-break: break-all;
+  }
+
+  &__nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+
+    &__item {
+      color: white;
+      display: inline-block;
+      font-size: 36px;
+      font-weight: bold;
+      padding: 0.5rem 0;
+      width: fit-content;
+      cursor: pointer;
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      &:nth-child(3n + 1) a {
+        color: $red;
+
+        &:hover {
+          color: darkred
+        }
+      }
+
+      &:nth-child(3n + 2) a {
+        color: $blue;
+
+        &:hover {
+          color: darkblue
+        }
+      }
+
+      &:nth-child(3n + 0) a {
+
+        color: rgb(255, 225, 0);
+
+        &:hover {
+          color: rgb(255, 190, 0);
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .menu {
+    &__background {
+      &__wrapper {
+        width: 65%;
+      }
+    }
+
+    &__links {
+      width: 35%;
+    }
+
+    &__nav {
+      &__item {
+        font-size: 3rem;
+      }
+    }
+  }
+}

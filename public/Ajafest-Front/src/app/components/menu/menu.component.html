@@ -1,0 +1,76 @@
+<div class="menu open-close-container" *ngIf="toggleMenu" [@openClose]>
+  <div class="menu__background__wrapper">
+    <div *ngFor="let picture of header.pictures | slice: 0:1">
+      <img
+        src="http://localhost:1337{{ picture.formats.large.url }}"
+        alt=""
+        class="menu__background menu__background--fix"
+      />
+    </div>
+    <div *ngFor="let picture of header.pictures">
+      <img
+        src="http://localhost:1337{{ picture.formats.large.url | slice: 0 }}"
+        alt=""
+        class="menu__background menu__background--second"
+      />
+    </div>
+  </div>
+  <div class="menu__links">
+    <ul class="menu__nav">
+      <li
+        (mouseenter)="displayBackground(1)"
+        (mouseleave)="removeBackground(1)"
+        class="menu__nav__item"
+      >
+        <a class="link" routerLink="/home" (click)="closeMenu()">Home</a>
+      </li>
+      <li
+        (mouseenter)="displayBackground(2)"
+        (mouseleave)="removeBackground(2)"
+        class="menu__nav__item"
+      >
+        <a class="link" routerLink="/artists" (click)="closeMenu()">Artistes</a>
+      </li>
+      <li
+        (mouseenter)="displayBackground(3)"
+        (mouseleave)="removeBackground(3)"
+        class="menu__nav__item"
+      >
+        <a class="link" routerLink="/benevoles" (click)="closeMenu()"
+          >Bénévoles</a
+        >
+      </li>
+      <li
+        (mouseenter)="displayBackground(4)"
+        (mouseleave)="removeBackground(4)"
+        class="menu__nav__item"
+      >
+        <a class="link" routerLink="/news" (click)="closeMenu()">News</a>
+      </li>
+      <li
+        (mouseenter)="displayBackground(5)"
+        (mouseleave)="removeBackground(5)"
+        class="menu__nav__item"
+      >
+        <a class="link" routerLink="/shop" (click)="closeMenu()">Shop</a>
+      </li>
+      <li
+        (mouseenter)="displayBackground(6)"
+        (mouseleave)="removeBackground(6)"
+        class="menu__nav__item"
+      >
+        <a class="link" routerLink="/contact" (click)="closeMenu()">Contact</a>
+      </li>
+      <li class="menu__nav__item">
+        <a target="_blank" href="https://www.instagram.com/ajafestofficiel/"
+          ><span class="icon icon-facebook2"></span
+        ></a>
+      </li>
+      <li class="menu__nav__item">
+        <a target="_blank" href="https://www.facebook.com/AJAFEST19"
+          ><span class="icon icon-instagram"></span
+        ></a>
+      </li>
+    </ul>
+  </div>
+</div>

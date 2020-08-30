@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_content_article_content_articles",
+  "info": {
+    "name": "contentArticle",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "contentImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "contentText": {
+      "type": "text"
+    }
+  }
+}

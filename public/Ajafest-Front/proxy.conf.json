@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "https://www.eventbrite.com/",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

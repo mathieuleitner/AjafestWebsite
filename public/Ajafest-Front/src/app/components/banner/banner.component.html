@@ -1,0 +1,13 @@
+<div class="banner">
+  <img
+    src="http://localhost:1337{{ image }}"
+    alt=""
+    class="banner__background"
+  />
+  <div class="banner__wrapper">
+    <h1 class="banner__title" *ngIf="title">{{ title }}</h1>
+    <p class="banner__subtitle" *ngIf="subtitle">
+      {{ subtitle }}
+    </p>
+  </div>
+</div>

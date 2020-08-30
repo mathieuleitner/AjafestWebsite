@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lineups",
+  "info": {
+    "name": "Lineups"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "artists": {
+      "collection": "artist",
+      "via": "lineups",
+      "dominant": true
+    },
+    "Day": {
+      "type": "enumeration",
+      "enum": [
+        "Samedi",
+        "Dimanche"
+      ]
+    }
+  }
+}

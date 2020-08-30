@@ -1,0 +1,25 @@
+<div class="articles-details">
+  <div class="container">
+    <div *ngFor="let article of article">
+      <div class="article">
+        <div class="article__intro">
+          <h1>{{ article.title }}</h1>
+          <h2 *ngIf="article.subtitle">{{ article.subtitle }}</h2>
+        </div>
+
+        <div
+          *ngFor="let contentArticle of article.contentArticle"
+          class="article__content"
+        >
+          <p *ngIf="contentArticle.contentText">
+            {{ contentArticle.contentText }}
+          </p>
+          <img
+            *ngIf="contentArticle.contentImg.url"
+            src="http://localhost:1337{{ contentArticle.contentImg.url }}"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

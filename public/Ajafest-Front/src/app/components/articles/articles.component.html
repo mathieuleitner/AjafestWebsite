@@ -1,0 +1,28 @@
+<div class="articles-page">
+  <app-banner
+    *ngIf="articlePage"
+    title="{{ articlePage.title }}"
+    subtitle="{{ articlePage.subtitle }}"
+    image="{{ articlePage.banner.url }}"
+  ></app-banner>
+  <div class="container">
+    <ul class="articles__wrapper">
+      <li *ngFor="let article of articles">
+        <a routerLink="/news/{{ article.slug }}">
+          <div class="card">
+            <h3>{{ article.createdAt | date: "dd-MM-yyyy" }}</h3>
+            <h2>{{ article.title }}</h2>
+
+            <figure class="card__img__wrapper">
+              <img
+                class="card__img"
+                src="http://localhost:1337{{ article.teaser.url }}"
+                alt=""
+              />
+            </figure>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

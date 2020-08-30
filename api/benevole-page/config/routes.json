@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/benevole-page",
+      "handler": "benevole-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/benevole-page",
+      "handler": "benevole-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/benevole-page",
+      "handler": "benevole-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
