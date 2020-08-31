@@ -78,4 +78,10 @@
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
   }
+
+  @media screen and (max-width:$sm) {
+    min-width: 168px;
+
+
+  }
 }

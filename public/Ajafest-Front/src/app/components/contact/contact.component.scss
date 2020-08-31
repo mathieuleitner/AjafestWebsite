@@ -42,8 +42,12 @@
       border-radius: 28px;
       border: none;
       width: 540px;
+      max-width: 100%;
     }
 
+    textarea {
+      min-height: 180px;
+    }
 
   }
 }

@@ -10,18 +10,20 @@
       <button class="button button--blue" (click)="displayAllArtists()">
         <label>Tous</label>
       </button>
-      <button
-        class="button button--yellow button--left"
-        (click)="sortArtistsByDay('Samedi')"
-      >
-        <label>Samedi</label>
-      </button>
-      <button
-        class="button button--red button--right"
-        (click)="sortArtistsByDay('Dimanche')"
-      >
-        <label>Dimanche</label>
-      </button>
+      <div class="buttons__days">
+        <button
+          class="button button--yellow button--left"
+          (click)="sortArtistsByDay('Samedi')"
+        >
+          <label>Samedi</label>
+        </button>
+        <button
+          class="button button--red button--right"
+          (click)="sortArtistsByDay('Dimanche')"
+        >
+          <label>Dimanche</label>
+        </button>
+      </div>
     </div>
 
     <ul>

@@ -113,4 +113,11 @@
       }
     }
   }
+
+  @media screen and (max-width:$sm) {
+    .header__logo {
+      height: 48px;
+      width: 48px;
+    }
+  }
 }

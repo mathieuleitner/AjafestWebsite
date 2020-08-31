@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: "contact", component: ContactComponent },
   { path: "page/:slug", component: PageComponent },
   { path: "shop", component: ShopComponent },
+  { path: "**", component: HomeComponent },
 ];
 
 @NgModule({

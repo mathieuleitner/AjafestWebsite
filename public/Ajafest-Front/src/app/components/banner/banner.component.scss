@@ -14,6 +14,7 @@
   }
 
   &__wrapper {
+    width: 70%;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -28,5 +29,27 @@
   &__subtitle {
     color: white;
     font-size: 1.8rem;
+  }
+
+
+}
+
+@media screen and (max-width:$md) {
+  .banner {
+    height: 400px;
+
+    img {
+      width: 120%;
+    }
+  }
+
+  @media screen and (max-width:$sm) {
+    .banner {
+      height: 300px;
+
+      img {
+        width: 150%;
+      }
+    }
   }
 }

@@ -43,9 +43,10 @@
     background-color: lightblue;
     display: flex;
     flex-direction: column;
-    padding: 3.5rem 1rem;
+    padding: 4rem 1rem;
     justify-content: space-between;
     word-break: break-all;
+    align-items: center;
   }
 
   &__nav {
@@ -96,7 +97,7 @@
   }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(md) {
   .menu {
     &__background {
       &__wrapper {
@@ -106,6 +107,7 @@
 
     &__links {
       width: 35%;
+      align-items: flex-start;
     }
 
     &__nav {

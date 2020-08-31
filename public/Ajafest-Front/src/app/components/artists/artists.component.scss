@@ -8,6 +8,10 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
+
+    &__days {
+      @include flex-center;
+    }
   }
 
   ul {
@@ -62,6 +66,20 @@
     }
   }
 
+  @media screen and (max-width:$sm) {
+    .artist {
+      flex-direction: column;
+    }
 
+    .buttons {
+      flex-direction: column;
+    }
+  }
 
+}
+
+@media screen and (max-width:$sm) {
+  .artists-page {
+    background-size: 200%;
+  }
 }
