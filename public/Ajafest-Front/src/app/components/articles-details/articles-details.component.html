@@ -11,9 +11,9 @@
           *ngFor="let contentArticle of article.contentArticle"
           class="article__content"
         >
-          <p *ngIf="contentArticle.contentText">
+          <markdown ngPreserveWhitespaces *ngIf="contentArticle.contentText">
             {{ contentArticle.contentText }}
-          </p>
+          </markdown>
           <img
             *ngIf="contentArticle.contentImg.url"
             src="http://localhost:1337{{ contentArticle.contentImg.url }}"

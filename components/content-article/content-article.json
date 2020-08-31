@@ -18,7 +18,7 @@
       "required": false
     },
     "contentText": {
-      "type": "text"
+      "type": "richtext"
     }
   }
 }

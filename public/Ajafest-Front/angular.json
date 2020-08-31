@@ -61,8 +61,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Ajafest-Front:build",
-            "proxyConfig": "proxy.conf.json"
+            "browserTarget": "Ajafest-Front:build"
           },
           "configurations": {
             "production": {

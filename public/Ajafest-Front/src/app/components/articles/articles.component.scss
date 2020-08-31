@@ -17,4 +17,15 @@
     justify-content: space-around;
     flex-wrap: wrap;
   }
+
+  .card {
+    background: white;
+    border-radius: 18px;
+    padding-top: 10px;
+
+    &__img__wrapper {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+  }
 }
