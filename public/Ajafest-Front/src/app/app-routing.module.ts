@@ -8,6 +8,7 @@ import { PageComponent } from "./components/page/page.component";
 import { ArtistsComponent } from "./components/artists/artists.component";
 import { ContactComponent } from "./components/contact/contact.component";
 import { ShopComponent } from "./components/shop/shop.component";
+import { ErrorComponent } from "./components/error/error.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: "contact", component: ContactComponent },
   { path: "page/:slug", component: PageComponent },
   { path: "shop", component: ShopComponent },
-  { path: "**", component: HomeComponent },
+  { path: "**", component: ErrorComponent },
 ];
 
 @NgModule({

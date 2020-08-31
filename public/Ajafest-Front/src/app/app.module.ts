@@ -27,6 +27,7 @@ import { PageComponent } from "./components/page/page.component";
 import { ArtistsComponent } from "./components/artists/artists.component";
 import { ContactComponent } from "./components/contact/contact.component";
 import { ShopComponent } from "./components/shop/shop.component";
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ShopComponent } from "./components/shop/shop.component";
     ArtistsComponent,
     ContactComponent,
     ShopComponent,
+    ErrorComponent,
   ],
   imports: [
     NgpSortModule,

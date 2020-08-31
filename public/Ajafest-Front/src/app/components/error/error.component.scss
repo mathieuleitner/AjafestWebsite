@@ -1,0 +1,10 @@
+.error-page {
+  background-image: url("../../../assets/images/yellow.png");
+  background-size: contain;
+  min-height: calc(100vh - 210px);
+  text-align: center;
+
+  h1 {
+    padding-top: 180px;
+  }
+}
