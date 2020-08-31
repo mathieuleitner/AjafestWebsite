@@ -1,15 +1,15 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, of } from "rxjs";
-import { catchError, tap } from "rxjs/operators";
-import { Pages } from "../models/pages.model";
+import { catchError } from "rxjs/operators";
+import { Header } from "../models/header.model";
 
-const apiUrl = "http://localhost:1337/pages";
+const apiUrl = "http://localhost:1337/header";
 
 @Injectable({
   providedIn: "root",
 })
-export class PagesService {
+export class HeaderService {
   constructor(private http: HttpClient) {}
 
   private handleError<T>(operation = "operation", result?: T) {
@@ -22,11 +22,15 @@ export class PagesService {
     };
   }
 
-  public getPageBySlug(slug: string): Observable<Pages> {
-    const url = `${apiUrl}?slug=${slug}`;
-    return this.http.get<Pages>(url).pipe(
-      tap((_) => console.log(`fetched Pages title=${slug}`)),
-      catchError(this.handleError<Pages>(`getLineupsById page=${slug}`))
-    );
+  public getHeader() {
+    return this.http
+      .get<Header>(apiUrl)
+      .pipe(catchError(this.handleError("getHeader", [])));
+  }
+
+  public getLogos() {
+    return this.http
+      .get<{ url: string }>("http://localhost:1337/logos")
+      .pipe(catchError(this.handleError("getLogo", [])));
   }
 }

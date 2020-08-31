@@ -36,7 +36,6 @@ export class ArticlesComponent implements OnInit {
       .getArticlePage()
       .subscribe((articlePage: ArticlePage) => {
         if (articlePage) {
-          console.log(articlePage);
           this.articlePage = articlePage;
         } else {
           this.articlePage = {};

@@ -2,14 +2,13 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, of } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
-import { Header } from "../models/header.model";
 
-const apiUrl = "http://localhost:1337/header";
+const apiUrl = "http://localhost:1337/article-page";
 
 @Injectable({
   providedIn: "root",
 })
-export class HeaderService {
+export class ArticlePageService {
   constructor(private http: HttpClient) {}
 
   private handleError<T>(operation = "operation", result?: T) {
@@ -22,17 +21,9 @@ export class HeaderService {
     };
   }
 
-  public getHeader() {
-    return this.http.get<Header>(apiUrl).pipe(
-      tap((header) => console.log(header)),
-      catchError(this.handleError("getHeader", []))
-    );
-  }
-
-  public getLogos() {
-    return this.http.get<{ url: string }>("http://localhost:1337/logos").pipe(
-      tap((logos) => console.log("get logo")),
-      catchError(this.handleError("getLogo", []))
-    );
+  public getArticlePage() {
+    return this.http
+      .get(apiUrl)
+      .pipe(catchError(this.handleError("get Article Page", [])));
   }
 }

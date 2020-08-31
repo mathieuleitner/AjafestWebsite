@@ -22,7 +22,6 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(form) {
-    console.log(form);
     this.contactFormService.PostMessages(form).subscribe(
       (response) => {
         console.log(response);

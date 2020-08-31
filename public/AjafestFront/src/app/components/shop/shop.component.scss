@@ -34,4 +34,18 @@
     background-position: 50% 50%;
   }
 
+  @media screen and (max-width:$sm) {
+    .intro {
+      padding: 120px 0px;
+      margin-bottom: 0px;
+
+      h1 {
+        margin-bottom: 20px;
+      }
+    }
+
+    #eventbrite-widget-container-118643942225 {
+      height: 570px !important;
+    }
+  }
 }

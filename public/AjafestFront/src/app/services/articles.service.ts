@@ -23,17 +23,15 @@ export class ArticlesService {
   }
 
   public getArticles() {
-    return this.http.get<Articles[]>(apiUrl).pipe(
-      tap((articles) => console.log("get articles")),
-      catchError(this.handleError("getArticles", []))
-    );
+    return this.http
+      .get<Articles[]>(apiUrl)
+      .pipe(catchError(this.handleError("getArticles", [])));
   }
 
   public getArticleBySlug(slug: string) {
     const url = `${apiUrl}/?slug=${slug}`;
-    return this.http.get(url).pipe(
-      tap((_) => console.log(`fetched Articles id=${slug}`)),
-      catchError(this.handleError(`getArticlesById id=${slug}`))
-    );
+    return this.http
+      .get(url)
+      .pipe(catchError(this.handleError(`getArticlesById id=${slug}`)));
   }
 }

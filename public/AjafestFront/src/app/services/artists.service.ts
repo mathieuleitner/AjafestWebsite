@@ -23,17 +23,15 @@ export class ArtistsService {
   }
 
   public getArtists() {
-    return this.http.get<Artists[]>(apiUrl).pipe(
-      tap((artists) => console.log("get Artists")),
-      catchError(this.handleError("getArtists", []))
-    );
+    return this.http
+      .get<Artists[]>(apiUrl)
+      .pipe(catchError(this.handleError("getArtists", [])));
   }
 
   public getArtistsById(id: string): Observable<Artists> {
     const url = `${apiUrl}/${id}`;
-    return this.http.get<Artists>(url).pipe(
-      tap((_) => console.log(`fetched Artists id=${id}`)),
-      catchError(this.handleError<Artists>(`getArtistsById id=${id}`))
-    );
+    return this.http
+      .get<Artists>(url)
+      .pipe(catchError(this.handleError<Artists>(`getArtistsById id=${id}`)));
   }
 }

@@ -8,9 +8,7 @@ export class ShopComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    var exampleCallback = function () {
-      console.log("Order complete!");
-    };
+    var exampleCallback = function () {};
 
     window.EBWidgets.createWidget({
       // Required

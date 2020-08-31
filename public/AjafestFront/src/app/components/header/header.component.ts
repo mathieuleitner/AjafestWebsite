@@ -65,7 +65,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.headerService.getLogos().subscribe((logos) => {
       if (logos) {
-        console.log(logos);
         this.logo1 = logos[0].logos[0].url;
         this.logo2 = logos[0].logos[1].url;
       } else {

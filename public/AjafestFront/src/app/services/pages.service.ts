@@ -2,13 +2,14 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, of } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
+import { Pages } from "../models/pages.model";
 
-const apiUrl = "http://localhost:1337/article-page";
+const apiUrl = "http://localhost:1337/pages";
 
 @Injectable({
   providedIn: "root",
 })
-export class ArticlePageService {
+export class PagesService {
   constructor(private http: HttpClient) {}
 
   private handleError<T>(operation = "operation", result?: T) {
@@ -21,10 +22,10 @@ export class ArticlePageService {
     };
   }
 
-  public getArticlePage() {
-    return this.http.get(apiUrl).pipe(
-      tap((res) => console.log(res)),
-      catchError(this.handleError("get Article Page", []))
-    );
+  public getPageBySlug(slug: string): Observable<Pages> {
+    const url = `${apiUrl}?slug=${slug}`;
+    return this.http
+      .get<Pages>(url)
+      .pipe(catchError(this.handleError<Pages>(`getLineupsById page=${slug}`)));
   }
 }
