@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"Ajafest.upload_file"}],"uuid":"b4fc3af4183449e0ba5dc34d676c6355"}

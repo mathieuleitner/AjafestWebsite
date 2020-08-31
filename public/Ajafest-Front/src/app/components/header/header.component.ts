@@ -130,4 +130,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
   updateMenu() {
     this.displayMenu();
   }
+
+  closeMenu() {
+    this.toggleMenu = false;
+    document.body.classList.remove("fixed");
+  }
 }
