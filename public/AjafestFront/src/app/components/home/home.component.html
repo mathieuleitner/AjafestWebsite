@@ -1,9 +1,9 @@
 <div class="home">
   <div class="container">
-    <section class="title">
-      <h1>Ajafest 2021</h1>
-      <h3>7 & 8 Aout 2021</h3>
-      <h2>Anières, Genève</h2>
+    <section class="title" *ngIf="homePage">
+      <h1>{{ homePage.title }}</h1>
+      <h3>{{ homePage.date }}</h3>
+      <h2>{{ homePage.subtitle }}</h2>
       <div class="cta">
         <a routerLink="/artists">
           <button class="button button--blue">
@@ -91,7 +91,7 @@
         <div *ngFor="let article of articles">
           <a routerLink="/news/{{ article.slug }}">
             <div class="card">
-              <span>{{ article.createdAt | date: "dd-MM-yyyy" }}</span>
+              <span>{{ article.created_at | date: "dd-MM-yyyy" }}</span>
               <h3>{{ article.title }}</h3>
               <figure class="card__img__wrapper">
                 <img

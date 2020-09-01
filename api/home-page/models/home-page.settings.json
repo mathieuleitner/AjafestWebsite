@@ -22,6 +22,15 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
     }
   }
 }

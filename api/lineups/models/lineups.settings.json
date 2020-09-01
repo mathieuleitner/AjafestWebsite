@@ -10,8 +10,8 @@
   },
   "attributes": {
     "artists": {
-      "collection": "artist",
       "via": "lineups",
+      "collection": "artist",
       "dominant": true
     },
     "Day": {

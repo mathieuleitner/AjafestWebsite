@@ -32,8 +32,8 @@
       "required": false
     },
     "lineups": {
-      "via": "artists",
-      "collection": "lineups"
+      "collection": "lineups",
+      "via": "artists"
     },
     "Hour": {
       "type": "time"

@@ -14,10 +14,12 @@
           <markdown ngPreserveWhitespaces *ngIf="contentArticle.contentText">
             {{ contentArticle.contentText }}
           </markdown>
-          <img
-            *ngIf="contentArticle.contentImg.url"
-            src="http://localhost:1337{{ contentArticle.contentImg.url }}"
-          />
+          <div *ngIf="contentArticle.contentImg">
+            <img
+              *ngIf="contentArticle.contentImg.url"
+              src="http://localhost:1337{{ contentArticle.contentImg.url }}"
+            />
+          </div>
         </div>
       </div>
     </div>

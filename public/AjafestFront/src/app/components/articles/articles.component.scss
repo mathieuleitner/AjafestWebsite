@@ -23,6 +23,8 @@
     background: white;
     border-radius: 18px;
     padding-top: 10px;
+    max-height: 330px;
+    flex-wrap: nowrap;
 
     &__img__wrapper {
       border-top-left-radius: 0px;
