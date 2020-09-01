@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"Ajafest.strapi_webhooks"}],"uuid":"1658e2e955214abb80466cc7b7ba375a"}
