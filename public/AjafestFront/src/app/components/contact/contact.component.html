@@ -17,6 +17,12 @@
           placeholder="Nom"
           formControlName="name"
         />
+        <div
+          *ngIf="name.invalid && (name.dirty || name.touched)"
+          class="alert alert--danger"
+        >
+          <div *ngIf="name.errors.required">Le nom est requis</div>
+        </div>
       </div>
       <div class="form-group">
         <label>Email</label>
@@ -26,20 +32,42 @@
           placeholder="Email"
           formControlName="email"
         />
+        <div
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="alert alert--danger"
+        >
+          <div *ngIf="email.errors.required">L'adresse mail est requise</div>
+          <div *ngIf="email.errors.pattern">
+            L'adresse mail n'est pas valide
+          </div>
+        </div>
       </div>
       <div class="form-group">
         <label>Votre message</label>
         <textarea
           type="text"
-          rows="4"
           class="form-control message"
           placeholder="Message"
           formControlName="message"
         ></textarea>
+        <div
+          *ngIf="message.invalid && (message.dirty || message.touched)"
+          class="alert alert--danger"
+        >
+          <div *ngIf="message.errors.required">
+            Vous avez oubliez votre message :)
+          </div>
+        </div>
       </div>
-      <button type="submit" class="button button--yellow">
+      <button
+        [disabled]="!contactForm.valid"
+        type="submit"
+        class="button button--yellow"
+        value="Envoyer le formulaire"
+      >
         <label>Envoyer :)</label>
       </button>
+      <div class="alert" *ngIf="validated">Merci pour votre message!</div>
     </form>
   </div>
 </div>

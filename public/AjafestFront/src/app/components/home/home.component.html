@@ -51,7 +51,7 @@
               />
             </figure>
             <p class="card__description">
-              {{ artist.about }}
+              {{ artist.about | slice: 0:120 }}...
             </p>
           </div>
         </div>

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/benevole-forms",
+      "handler": "benevole-forms.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/benevole-forms/count",
+      "handler": "benevole-forms.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/benevole-forms/:id",
+      "handler": "benevole-forms.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/benevole-forms",
+      "handler": "benevole-forms.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/benevole-forms/:id",
+      "handler": "benevole-forms.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/benevole-forms/:id",
+      "handler": "benevole-forms.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

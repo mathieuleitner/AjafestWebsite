@@ -51,6 +51,19 @@
 
   }
 
+  .alert {
+    background: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    width: fit-content;
+    padding: 4px;
+    margin-top: 4px;
+
+    &--danger {
+      background: $yellow;
+    }
+  }
+
   @media screen and (max-width:$sm) {
     form {
       padding-top: 0px;

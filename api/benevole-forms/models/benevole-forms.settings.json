@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "benevole_forms",
+  "info": {
+    "name": "benevoleForms"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    }
+  }
+}
